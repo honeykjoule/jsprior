@@ -18,6 +18,7 @@
   "author": "honeykjoule",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/node": "^18.15.11"
+    "@types/node": "^18.15.11",
+    "ts-node": "^10.9.1"
   }
 }
