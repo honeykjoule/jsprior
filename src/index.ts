@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import { OpenAI } from "langchain/llms";
 import {LLMChain } from "langchain/chains";
-import { TASK_CREATION_PROMPT } from "./prompts.js";
+import { TASK_CREATION_PROMPT } from "./promptTemplates.js";
 
 // Load the API key from the environment
 dotenv.config();
