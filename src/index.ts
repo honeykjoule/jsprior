@@ -1,11 +1,9 @@
-import dotenv from "dotenv";
+import { getOpenAIAPIKey } from "./environment.js";
 import { OpenAI } from "langchain/llms";
 import {LLMChain } from "langchain/chains";
-import { TASK_CREATION_PROMPT } from "./promptTemplates.js";
+import { TASK_CREATION_PROMPT } from "./prompts.js";
 
-// Load the API key from the environment
-dotenv.config();
-const OPENAI = new OpenAI({openAIApiKey: process.env.OPENAI_API_KEY});
+const model = new OpenAI({openAIApiKey: getOpenAIAPIKey()});
 
 // Prepare the chain
 let objective = "Grow a synthetic intelligence that can create tasks to achieve any objective.";
